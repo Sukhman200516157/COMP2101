@@ -9,7 +9,7 @@ FQDN=$(hostname)
 
 #The operating system name and version
 
-OS_NAME=$(hostnamectl | grep "Operating System" )
+OS_NAME=$(hostnamectl )
 
 #Any IP addresses the machine has that are not on the 127 network 
 
