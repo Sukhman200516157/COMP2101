@@ -2,26 +2,26 @@
 
 # It a script to display information about a computer
 
-# The purpose of this script is to display some important identity information about a computer.
+# The purpose of  script is to display some important identity information about a computer.
 
-#The system’s fully-qualified domain name (FQDN)
+#system’s fully-qualified domain name (FQDN)
 FQDN=$(hostname)
 
-# The operating system name and version
+#The operating system name and version
 
 OS_NAME=$(hostnamectl | grep "Operating System" )
 
-# Any IP addresses the machine has that are not on the 127 network 
+#Any IP addresses the machine has that are not on the 127 network 
 
-IP_ADDRESSES=$(hostname -I | grep -v "127.")
+IP_ADDRESSES=$(hostname -I | grep -v "127")
 
-# The amount of space available in only the root filesystem
+# The amount of space available in only the root filesystem displayed as a human-friendly number .
 
-ROOT_SPACE=$(df -h | grep "/$" | tr -s " " )
+ROOT_SPACE=$(df -h /boot)
 
-# Output 
+# Displaying the Output 
 
-echo "Fully Qualified Domain Name: $FQDN"
+echo "FQDN: $FQDN"
 
 echo "Host Information: $OS_NAME"
 
