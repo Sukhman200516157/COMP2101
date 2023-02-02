@@ -17,7 +17,7 @@ IP_ADDRESSES=$(hostname -I | grep -v "127.")
 
 # The amount of space available in only the root filesystem
 
-ROOT_SPACE=$(df -h | grep "/$" | tr -s " " | cut -d " " -f4)
+ROOT_SPACE=$(df -h | grep "/$" | tr -s " " )
 
 # Output 
 
