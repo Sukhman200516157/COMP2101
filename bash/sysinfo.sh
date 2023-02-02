@@ -7,15 +7,15 @@
 #system’s fully-qualified domain name (FQDN)
 FQDN=$(hostname)
 
-#The operating system name and version
+#The operating system name and version details using hostnamectl 
 
 OS_NAME=$(hostnamectl )
 
-#Any IP addresses the machine has that are not on the 127 network 
+# IP addresses on machine has that are not on the 127 network 
 
 IP_ADDRESSES=$(hostname -I | grep -v "127")
 
-# The amount of space available in only the root filesystem displayed as a human-friendly number .
+# amount of space available in only the root filesystem displayed as a human-friendly number .
 
 ROOT_SPACE=$(df -h /boot)
 
