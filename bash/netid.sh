@@ -19,6 +19,10 @@
 #            e.g. network-config-expanded.sh ens34
 #         Your script must allow the user to specify both verbose mode and an interface name if they want
 # TASK 2: Dynamically identify the list of interface names for the computer running the script, and use a for loop to generate the report for every interface except loopback - do not include loopback network information in your output
+
+
+
+
 #Using while loop to run our script
 while [ $# -gt 0 ]; do
 [ "$verbose" = "yes" ] && echo  Information of Command line to verbose from $#
@@ -31,7 +35,7 @@ case "$1" in
 
     -v )
         [ "$verbose" = "yes" ]
-        echo 'In the command line there is an option -v'
+        echo "In the command line there is an option -v"
         exit
         ;;
 
@@ -40,7 +44,7 @@ case "$1" in
 
     [0-9])
         if [ "$verbose" = "yes" ]; then
-            echo 'You have used -v options'
+            echo "You have used -v "
             exit
         else
             echo $(netid.sh)
@@ -53,7 +57,7 @@ case "$1" in
 
     [a-z])
                 if [ "$verbose" = "yes" ]; then
-                        echo "You have used -v options"
+                        echo "You have used -v "
                         exit
                 else
                         echo $(netid.sh)
@@ -65,7 +69,7 @@ case "$1" in
 
     [A-Z])
                 if [ "$verbose" = "yes" ]; then
-                        echo 'You have used -v options'
+                        echo "You have used -v "
                         exit
                 else
                         echo $(netid.sh)
