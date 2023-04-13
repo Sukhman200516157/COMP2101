@@ -33,7 +33,7 @@ if ($systemInfo) {
     Write-Output "Failed to retrieve system information."
 }
 
-Write-Output ""
+#Write-Output ""
 
 function Get-OperatingSystem {
     $operatingSystem = Get-WmiObject win32_operatingsystem
